@@ -1,5 +1,5 @@
 <?php
-include("../lib/dbdata.php");
+include("../lib/dbdata2.php");
 $connect=dbconn();
 $id=$_POST['user_join_id'];
 $pws=$_POST['user_join_pw'];

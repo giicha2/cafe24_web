@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../lib/dbdata.php");
+include("../lib/dbdata2.php");
 $connect=dbconn();
 $id=$_POST['user_input_id'];
 $pws=$_POST['user_input_pw'];
@@ -10,7 +10,7 @@ $result=mysqli_query($connect,$sql);
 $member=mysqli_fetch_array($result);
 
 
-if(isset($id) && isset($pw)){
+if(isset($id) && isset($pws)){
   if($id==$member['name'] && $pw==$member['pw']){
     $_SESSION['loggedin']=true;
     header("Location:listpage.php");
@@ -33,12 +33,12 @@ if(!$pws){
   Msg("Input pw");
 }elseif(!$member['pw']){
   Msg("Not collect pw");
-}/*else{
+}else{
   echo "<script>
     alert('Welcome ');
     location.href='listpage.php';
     </script>";
-}*/
+}
 
 
 
