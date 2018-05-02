@@ -12,5 +12,6 @@
       <tr style="padding:10px;"><td><input type="submit"  value="join"></td><tr>
     </form>
   </table>
+  <input type="file" name="file01">
 </body>
 </html>

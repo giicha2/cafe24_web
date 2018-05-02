@@ -18,14 +18,17 @@ $last=$goto+10;
 //before page
 $before_group=$goto-1;
 if($before_group<1)($before_group=1);
-if($_page !=1)echo("<a href=$PHP_SELF?_page=$before_group$href>&lArr;</a>&nbsp;");
-
+if($_page !=1){
+  echo"<a href=".$_SERVER['PHP_SELF']."?_page=$before_group$href>&lArr;</a>&nbsp;";
+  //echo "<a href=".$_SERVER['PHP_SELF']."?no=".$_GET['page'].">"
+}
+//if($_page !=1)echo("<a href=$_SERVER[PHP_SELF]?_page=$before_group$href>&lArr;</a>&nbsp;");
 //show page nums
 for($e=$goto; $e<$last; $e++){
   if($e>$rr)break;
-  if($e==$_page)echo("$e");
+  if($e==$_page)echo("<strong>$e</strong>");
           else{
-            echo("&nbsp; <a href=$PHP_SELF?_page=$e$href>$e</a>&nbsp;");
+            echo "&nbsp; <a href=".$_SERVER['PHP_SELF']."?_page=$e$href>[$e]</a>&nbsp;";
           }
 }
 
@@ -33,5 +36,7 @@ for($e=$goto; $e<$last; $e++){
 //next page
 $next_group=$last;
 if($next_group>$rr)($next_group=$rr);
-if($_page !=$rr)echo("&nbsp; <a href=$PHP_SELF?_page=$next_group$href>&lArr;</a>");
+if($_page !=$rr){
+  echo"&nbsp; <a href=".$_SERVER['PHP_SELF']."?_page=$next_group$href>&rArr;</a>";
+}
  ?>

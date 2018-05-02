@@ -16,8 +16,10 @@ echo "<td><a href='logoutpage.php'>logout</a></td>";
     <table>
       <tr>
         <td><a href='joinpage.php'>join</a></td>
-        <td width=20px>   </td>
+        <td width=20px></td>
         <td><a href='loginpage.php'>login</a></td>
+        <td width=20px></td>
+        <td><a href='uploadpage.php'>upload</a></td>
       </tr>
     </table>
   <?php
@@ -27,7 +29,7 @@ echo "<td><a href='logoutpage.php'>logout</a></td>";
 
 </div>
 <div align="center" style="padding:30px;">
-<img src="img/img01.jpg" width="300px" alt="myimg">
+<img src="../img/img01.jpg" width="300px" alt="myimg">
 </div>
 </body>
 </html>
